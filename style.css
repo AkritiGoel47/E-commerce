@@ -27,6 +27,11 @@ header{
   
 
 }
+.containerHeader{
+    padding:0 10vw;
+  
+
+}
 nav ul li{
     list-style: none;
     padding: 0 12px;
@@ -37,7 +42,7 @@ nav ul li{
 }
 .section1{
     background: #f2f2f2;
-    height: 122vh;
+   
 }
 .search{
     width: 28vw;
@@ -48,11 +53,82 @@ nav ul li{
 }
 .homeimg{
     width: 80vw;
-    padding: 50px ;
-justify-content: center;
+    
+/* justify-content: center; */
 }
 .homeimg2{
     width: 80vw;
     
+/* justify-content: center; */
+}
+ .homeimg3{
+    width: 80vw;
+    
+/* justify-content: center; */
+ }
+.homeimg4{
+    width: 80vw;
+    
+/* justify-content: center; */
+}
+.homeimg5{
+    width: 80vw;
+    
+/* justify-content: center; */
+}
+footer{
+    padding: 23px;
+    text-align: center;
+    box-shadow: Igb(0 0 0 / 24%) 0px 3px 8px ;
+    font-style:normal;
+
+}
+.rightbox{
+    display: flex;
+    margin: 12px;
+    
+    font-weight: bolder;
     
 }
+@media (max-width: 1024px)
+{
+    header{
+        height:122px;
+
+    }
+    nav{
+        flex-direction: column;
+        align-items: center;
+    }
+    .right{
+        flex-direction: column;
+    }
+    .rightbox{
+        display: flex;
+        margin: 12px;
+        /* font-size: smaller; */
+    }
+    nav ul li{
+        list-style: none;
+        padding: 0 4px;
+        font-size: 10px;
+    }
+    .containerHeader{
+        padding: 0 1vw;
+    }
+    @media (max-width: 425px)
+    {
+        .containerHeader{
+            padding: 0 1vw;
+        }
+        .rightbox{
+            padding: 0 0.5vw;
+        }
+    }
+    @media (max-width: 375px){
+        .containerHeader{
+        padding-bottom:  0 1vw;
+        }
+    }
+}
+ 

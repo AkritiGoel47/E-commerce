@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <style>
+        /* @media only screen and (max-width:600px){
+            .container{
+                flex-wrap: wrap ;
+            }
+        } */
+       /* Styles for desktop screens
+@media (min-width: 768px) {
+  /* Your desktop styles go here */
+
+
+/* Styles for tablets */
+/* @media (max-width: 767px) {
+    background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0l47pVr-JnzuTq-Dv7_q8Bv-W2zUMv56YCA&usqp=CAU');
+  /* Your tablet styles go here */
+  
+
+
+/* Styles for mobile screens */
+
+
+            
+        
+            
+        
+        body{
+            background-color:rgb(229, 177, 159);
+        }
+        
+        .container{
+            display:flex;
+            justify-content: center;
+            overflow: hidden;
+
+        }
+    
+       .box{
+       
+        border-radius: 50px;
+        height: 1400px;
+        width: 500px;
+                border: 1px black;
+        background-image: url(https://img.freepik.com/free-vector/christmas-pattern_53876-57618.jpg?w=740&t=st=1705898542~exp=1705899142~hmac=2b359ee574e4faea2eabc9925a844d454d9cf12431fb636e6264a8836578bf00);
+       
+    
+  
+}
+       
+       
+       /* input[type="text"]{
+        width: 150px;
+        background-color: rgb(229, 177, 159);
+        border: 2px dashed black;
+        margin-left: 160px;
+        margin-top: 20px;
+        margin-right: 100px; 
+       
+        font-size:0em;
+        height : 20px;
+        text-align: center;
+         */
+
+       
+       #output{
+        text-align: center;
+        text-transform: uppercase;
+        text-decoration:underline;
+        text-size-adjust: 50%;
+        text-decoration-color:black;
+        font-size:300%;
+        font-family: Arial, Helvetica, sans-serif ;
+        margin-top: auto;
+         /* animation: textDrop 1s ease-in-out;  */
+          animation: slide-in 1s ease-in-out;  
+        /* animation: sprite-animation 1s steps(3) infinite; */
+       }
+       .txt{
+        margin-top: 75px;
+        font-size:200%;
+        text-transform:capitalize;
+        margin-left: 20px;
+        margin-right: 20px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+         /* animation: textDrop 1s ease-in-out;  */
+          animation: slide-in 1s ease-in-out;  
+        /* animation: sprite-animation 1s steps(3) infinite; */
+
+       }
+       /* @keyframes sprite-animation {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -300px 0;
+  }
+} */
+
+         @keyframes slide-in {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}  
+        /* @keyframes textDrop {
+      0% {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }  */
+       
+          
+       
+       
+    </style>
+</head>
+<body>
+    
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <div class="container">
+         <div class="box" style="background-color:rgb(229, 177, 159);"><div id="output"> happy <br> birthday <br></div><div class="txt">This day reminds me of your exceptional worth to me, and I’m thrilled to relish in it with you, transforming it into a day as delightful and remarkable as you. Let’s raise our glasses to a fresh year of moments filled with merriment, laughter, and enduring love.</div>
+        <img src="https://cdn.pixabay.com/photo/2022/04/09/23/39/birthday-7122450_1280.png"   style=" max-width:100%;  height:auto; margin-top: 20px; border-radius: 20px ; animation: slide-in 1s ease-in-out; " >
+        <h1 style="margin-left: 25%;">Countdown Timer</h1>
+        <button onclick="getDOB()" style="margin-left: 30%;  background-color:rgb(229, 177, 159) ;">Enter your Date of Birth</button>
+        <p id="countdown"></p>
+        
+         </div>
+    </div>
+    <script>
+        var userInput = prompt("Enter Your Name:");
+        
+        
+        var outputElement = document.getElementById("output");
+        outputElement.innerHTML = "HAPPY <br> BIRTHDAY <br> " + userInput;
+
+        function getDOB() {
+      // Prompt the user to enter their date of birth
+      const dobInput = prompt("Enter your Date of Birth (YYYY-MM-DD):");
+
+      // Validate the entered date
+      const dob = new Date(dobInput);
+      if (isNaN(dob.getTime())) {
+        alert("Invalid date format. Please enter your date of birth in the format YYYY-MM-DD.");
+        return;
+      }
+
+      // Calculate the time remaining in milliseconds
+      const now = new Date();
+      const timeRemaining = dob - now;
+
+      // Convert milliseconds to days, hours, minutes, and seconds
+      const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+      // Display the countdown
+      const countdownElement = document.getElementById('countdown');
+      countdownElement.innerHTML = `Time until your birthday <br> ${days} DAYS,   ${hours} HOURS,   ${minutes} MINUTES,   ${seconds} SECONDS`;
+    }
+ 
+
+
+
+
+
+
+
+        </script>
+        
+     </body>
+     </html>

@@ -57,25 +57,24 @@ nav ul li{
 /* justify-content: center; */
 }
 .homeimg2{
-    width: 80vw;
+    width: 12vw;
+   margin: 6px 5px;
+   border-radius: 20px;
+   flex-wrap: wrap;
     
 /* justify-content: center; */
 }
- .homeimg3{
-    width: 80vw;
-    
-/* justify-content: center; */
- }
+ /*  */
 .homeimg4{
-    width: 80vw;
+    width: 12vw;
     
-/* justify-content: center; */
+  
+    border-radius: 20px;
+    margin:  30px;
+    flex-wrap: wrap;
+
 }
-.homeimg5{
-    width: 80vw;
-    
-/* justify-content: center; */
-}
+
 footer{
     padding: 23px;
     text-align: center;

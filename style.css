@@ -58,22 +58,14 @@ nav ul li{
 }
 .homeimg2{
     width: 12vw;
-   margin: 6px 5px;
+   margin: 6px 7px 6px 6px;
    border-radius: 20px;
-   flex-wrap: wrap;
+   
     
 /* justify-content: center; */
 }
  /*  */
-.homeimg4{
-    width: 12vw;
-    
-  
-    border-radius: 20px;
-    margin:  30px;
-    flex-wrap: wrap;
 
-}
 
 footer{
     padding: 23px;
@@ -111,10 +103,19 @@ footer{
         list-style: none;
         padding: 0 4px;
         font-size: 10px;
+        
     }
+   
     .containerHeader{
         padding: 0 1vw;
     }
+    /* .homeimg{
+        
+       /* margin-right: 7px; */
+        /* justify-content: center; */
+        /* align-items: center; */
+    } 
+
     @media (max-width: 425px)
     {
         .containerHeader{
@@ -129,5 +130,5 @@ footer{
         padding-bottom:  0 1vw;
         }
     }
-}
+
  

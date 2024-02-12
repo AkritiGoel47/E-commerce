@@ -43,7 +43,25 @@ function populateProductDetails() {
             rating: 4.8,
             price: 999,
             discountedPrice: 1299,
+            sizes: ["28", "30", "32"]
+        }],
+        ["product5", {
+            image: "https://rukminim2.flixcart.com/image/850/1000/xif0q/ethnic-set/h/5/h/xl-sdes624a-325-manyavar-original-imagkx7qh9bympzn.jpeg?q=90&crop=true",
+            title: "MANYAVAR",
+            description: "This is a stylish and comfortable kurtas that you'll love!",
+            rating: 4.8,
+            price: 999,
+            discountedPrice: 1299,
             sizes: ["small", "medium", "large"]
+        }],
+        ["product6", {
+            image: "https://rukminim2.flixcart.com/image/850/1000/xif0q/trouser/9/v/f/34-pctpcctfm96250-peter-england-original-imagkc83xyjhvhfp.jpeg?q=90",
+            title: "FLYING MACHINE",
+            description: "This is a stylish and comfortable Trousers that you'll love!",
+            rating: 4.8,
+            price: 999,
+            discountedPrice: 1299,
+            sizes: ["28", "30", "32"]
         }],
 
 

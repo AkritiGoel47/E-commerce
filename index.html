@@ -22,49 +22,99 @@
                     <li>Beauty</li>
                     <li>Studio</li>
                 </ul>
-
             </div>
             <div class="right flex items-center">
                 <input class="search" placeholder="Search for products, brands and more" class:" desktop-searchbar" value data-reactid="904"/>
                 <div class="rightbox">
-                <div class="profile mx-2">Profile</div>
-                <div class="wishlist mx-2">Wishlist</div>
-                <div class="bag mx-2">Bag</div>
+                    <div class="profile mx-2">Profile</div>
+                    <div class="wishlist mx-2">Wishlist</div>
+                    <div class="bag mx-2">Bag</div>
                 </div>
             </div>
         </nav>
     </header>
-    <section class="container section1">
+
+    <section class="container section1" id="productContainer">
         <img class="homeimg" src="myntra1.png"/>
         <img class="homeimg" src="myntranw.png"/>
+    </section>
 
-        <a href="product1.html"target="_blank"> <img class="homeimg2" src="myntra2.png"/></a>
-        
-        
-        <a href="product2.html"target="_blank"><img class="homeimg2" src="myntra3.png"/></a>
-        <a href="product3.html"target="_blank"><img class="homeimg2" src="myntra4.png"/></a>
-        <a href="product4.html"target="_blank"><img class="homeimg2" src="myntra5.png"/></a>
-        <a href="product5.html"target="_blank"><img class="homeimg2" src="myntra6.png"/></a>
-        <a href="product6.html"target="_blank"><img class="homeimg2" src="myntra7.png"/></a>
+    
 
+    <script src="script.js"></script>
+    <script>
+        const products = new Map([
+            ["product1", {
+                image: "myntra2.png",
+            }],
+            ["product2", {
+                image: "myntra3.png",
+            }],
+            ["product3", {
+                image: "myntra4.png",
+            }],
+            ["product4", {
+                image: "myntra5.png",
+            }],
+            ["product5", {
+                image: "myntra6.png",
+            }],
+            ["product6", {
+                image: "myntra7.png",
+            }],
+            ["product7", {
+                image: "myntra8.png",
+            }],
+            ["product8", {
+                image: "myntra9.png",
+            }],
+            ["product9", {
+                image: "myntra10.png",
+            }],
+            ["product10", {
+                image: "myntra11.png",
 
-        
-        <a href="product7.html"target="_blank"><img class="homeimg2" src="myntra8.png"/></a>
-        <a href="product8.html"target="_blank"> <img class="homeimg2" src="myntra9.png"/></a>
-            <a href="product9.html"target="_blank"><img class="homeimg2" src="myntra14.png"/></a>
-                <a href="product10.html"target="_blank"><img class="homeimg2" src="myntra11.png"/></a>
-                    <a href="product11.html"target="_blank"><img class="homeimg2" src="myntra12.png"/></a>
-                        <a href="product12.html"target="_blank"> <img class="homeimg2" src="myntra13.png"/></a>
-        <img class="homeimg" src="myntra15.png"/>
+            }],
+            ["product11", {
+                image: "myntra12.png",
+
+            }],
+            ["product12", {
+                image: "myntra13.png",
+
+            }],
+
+            
+        ]);
        
 
+        function addProductCard(productKey, product) {
+            const productCard = document.createElement("a");
+            productCard.href = `product.html?key=${productKey}`; 
 
+            const productImage = document.createElement("img");
+            productImage.classList.add("homeimg2");
+            productImage.src = product.image;
 
+            productCard.appendChild(productImage);
+            document.getElementById("productContainer").appendChild(productCard);
+        }
 
-    </section>
+        
+        function populateProductCards() {
+            products.forEach((product, key) => {
+                addProductCard(key, product);
+            });
+        }
+
+        
+        window.onload = populateProductCards;
+    </script>
+
     <footer>
         Copyright &copy; myntra.com | All rights reserved
     </footer>
-    
+
 </body>
 </html>
+    
